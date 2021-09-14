@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
             opacity:'0.6',
             color:'black'
         }
+    },
+    img:{
+        width: '350px',
+        height: '350px'
     }
 
 }));

@@ -8,32 +8,33 @@ import {filterAction} from "../Store/FilterReducer";
 
 
 const Filter = () => {
+
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    const filter = (s:string) => {
-        dispatch(filterAction(s));
+    const filterItems = (filterName:string) => {
+        dispatch(filterAction(filterName));
 
     }
 
     return (
-        <Paper className={classes.paper}>
+        <Paper className = {classes.paper}>
             <Tabs
-                value={false}
-                indicatorColor="primary"
-                textColor="primary"
+                value = {false}
+                indicatorColor = "primary"
+                textColor = "primary"
                 centered>
-                <Tab className={classes.tab}
-                    label="Mammals"
-                     onClick={() => filter('mammals')}/>
+                <Tab className = {classes.tab}
+                    label = "Mammals"
+                     onClick = {() => filterItems('mammals')}/>
 
-                <Tab  className={classes.tab}
-                    label="Birds"
-                     onClick={() => filter('birds')}/>
+                <Tab  className = {classes.tab}
+                    label = "Birds"
+                     onClick = {() => filterItems('birds')}/>
 
-                <Tab  className={classes.tab}
-                    label="Fishes"
-                     onClick={() => filter('fishes')}/>
+                <Tab  className = {classes.tab}
+                    label = "Fishes"
+                     onClick = {() => filterItems('fishes')}/>
 
             </Tabs>
         </Paper>

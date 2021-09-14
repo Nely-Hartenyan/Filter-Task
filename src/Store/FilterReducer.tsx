@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React from "react";
 import lion from '../Images/lion.jpg';
 import porcupine from '../Images/porcupine.jpg';
 import panda from '../Images/panda.png';

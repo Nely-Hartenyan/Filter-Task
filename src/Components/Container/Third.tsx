@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Third=()=>{
+const Third = () => {
     return (
         <div>
             Third

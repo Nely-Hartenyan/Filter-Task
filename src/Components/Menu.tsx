@@ -5,10 +5,11 @@ import ListAltIcon from "@material-ui/icons/ListAlt";
 import GroupIcon from "@material-ui/icons/Group";
 import VerticalSplitIcon from "@material-ui/icons/VerticalSplit";
 import Paper from "@material-ui/core/Paper";
-import useStyles from "../Style";
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {filterAction} from "../Store/FilterReducer";
+import useStyles from "../Style";
+
 
 
 const Menu = () => {
@@ -16,34 +17,32 @@ const Menu = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    const filter = (s:string) => {
-        dispatch(filterAction(s));
-        console.log(s)
+    const filterItems = (filterName:string) => {
+        dispatch(filterAction(filterName));
+
     }
 
-
     return (
-        <Paper className={`${classes.paper} ${classes.paperHeight}`}>
+        <Paper className = {`${classes.paper} ${classes.paperHeight}`}>
             <MenuList>
-                <NavLink to='/list'
-                         onClick={() => filter('')}>
+                <NavLink to = '/list'
+                         onClick = {() => filterItems('')}>
                     <MenuItem>
                         <ListAltIcon/>
                     </MenuItem>
                 </NavLink>
 
-                <NavLink to='/group'>
+                <NavLink to = '/group'>
                     <MenuItem>
                         <GroupIcon/>
                     </MenuItem>
                 </NavLink>
 
-                <NavLink to='/vertical'>
+                <NavLink to = '/vertical'>
                     <MenuItem>
                         <VerticalSplitIcon/>
                     </MenuItem>
                 </NavLink>
-
             </MenuList>
         </Paper>
     )

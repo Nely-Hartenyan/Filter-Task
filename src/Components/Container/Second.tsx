@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Second=()=>{
+const Second = () => {
     return (
         <div>
             Second
